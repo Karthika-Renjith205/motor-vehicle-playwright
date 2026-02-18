@@ -36,8 +36,8 @@ jobs:
 
       - name: List features and step definitions
         run: |
-          ls -R tests/features/
-          ls -R "tests/steps/
+          ls -R "tests/features/"
+          ls -R "tests/steps/"
 
       - name: Run Cucumber tests
         run: |
