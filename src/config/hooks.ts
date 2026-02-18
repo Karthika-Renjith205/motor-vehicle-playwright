@@ -22,7 +22,6 @@ Before(async function () {
         viewport: { width: 1280, height: 1024 },
         recordVideo: { dir: 'videos/' } // optional
     });
-  await this.context.tracing.start({ screenshots: true, snapshots: true, sources: true });
   page = await this.context.newPage();
   this.page = page;
 });
