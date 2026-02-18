@@ -19,17 +19,20 @@ export class CalculationResultsPopupPage {
    }
 
    async verifyPopupIsDisplayed() {
+      console.log(`Verifying the popup is present`);
       await expect(this.modalTitle).toHaveText('Calculation');
       await expect(this.modalBodyHeading).toHaveText('Motor vehicle registration')
       await expect(this.modelCloseButton).toBeVisible();
    }
 
    async verifyPassengerVehicle(regristration: string) {
+      console.log(`Verifying the registration`);
       await expect(this.passengerRegistered).toBeVisible();
       await expect(this.passengerRegistered.locator('xpath=following-sibling::td')).toHaveText(regristration);
    }
 
    async verifyPurchasePrice(purchasePriceValue: string) {
+      console.log(`Verifying the purchase value`);
       await expect(this.purchasePrice).toBeVisible();
       await expect(this.purchasePrice.locator('xpath=following-sibling::td')).toHaveText(purchasePriceValue);
    }
