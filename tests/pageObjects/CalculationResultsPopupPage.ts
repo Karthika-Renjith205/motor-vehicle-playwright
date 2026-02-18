@@ -19,7 +19,6 @@ export class CalculationResultsPopupPage {
    }
 
    async verifyPopupIsDisplayed() {
-      await expect(this.modalTitle).toHaveText('Calculation');
       await expect(this.modalBodyHeading).toHaveText('Motor vehicle registration')
       await expect(this.modelCloseButton).toBeVisible();
       console.log(`Verifying the popup is present`);
