@@ -35,8 +35,9 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Cucumber tests
-        run: npx cucumber-js "features/**/*.feature" 
-            --require "features/step-definitions/**/*.ts" 
+        run: |
+          npx cucumber-js "features/**/*.feature" \
+            --require "features/step-definitions/**/*.ts" \
             --tags "@CheckMotorVehicleStampDuty"
 
       - name: Generate Allure Report
