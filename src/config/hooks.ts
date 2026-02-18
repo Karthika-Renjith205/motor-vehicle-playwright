@@ -9,7 +9,7 @@ setDefaultTimeout(30000);
 
 Before(async function () {
   // this.browser = await firefox.launch({ headless: false });
-  this.browser = await chromium.launch({ headless: false });
+  this.browser = await chromium.launch({ headless: true });
   this.context = await this.browser.newContext();
   await this.context.tracing.start({ screenshots: true, snapshots: true, sources: true });
   page = await this.context.newPage();
