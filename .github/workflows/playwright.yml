@@ -39,10 +39,10 @@ jobs:
           ls -R "tests/features/"
           ls -R "tests/steps/"
 
-      - name: Run Cucumber tests
+      - name: Run Cucumber Tests
         run: |
           npx cucumber-js "tests/features/*.feature" \
-          --require-module ts-node/register \
+            --require-module ts-node/register \
             --require "tests/steps/*.ts" \
             --tags "@CheckMotorVehicleStampDuty"
 
