@@ -24,11 +24,11 @@ export class RevenueNswCalculatorPage {
     }
 
     async enterPurchasePrice(purchaseValue: string) {
-        console.log(`Entering purchase price: ${purchaseValue}`);
         await this.purchasePrice.fill(purchaseValue);
     }
 
     async clickCalculateButton() {
         await this.calculateButton.click();
+        console.log("clicked calculate button");
     }
 }

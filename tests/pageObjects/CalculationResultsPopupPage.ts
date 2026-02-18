@@ -19,9 +19,12 @@ export class CalculationResultsPopupPage {
    }
 
    async verifyPopupIsDisplayed() {
+      await this.modalTitle.waitFor({ state: 'visible', timeout: 5000 });
       await expect(this.modalTitle).toHaveText('Calculation');
       await expect(this.modalBodyHeading).toHaveText('Motor vehicle registration')
       await expect(this.modelCloseButton).toBeVisible();
+      console.log(`Verifying the popup is present`);
+
    }
 
    async verifyPassengerVehicle(regristration: string) {
@@ -35,6 +38,7 @@ export class CalculationResultsPopupPage {
    }
 
    async verifyDutyPayable(dutyPayableValue: string) {
+      console.log(`Verifying the duty payable value`);
       await expect(this.dutyPayable).toBeVisible();
       await expect(this.dutyPayable.locator('xpath=following-sibling::td')).toHaveText(dutyPayableValue);
    }
