@@ -19,11 +19,12 @@ export class CalculationResultsPopupPage {
    }
 
    async verifyPopupIsDisplayed() {
-      console.log(`Verifying the popup is present`);
       await this.modalTitle.waitFor({ state: 'visible', timeout: 5000 });
       await expect(this.modalTitle).toHaveText('Calculation');
       await expect(this.modalBodyHeading).toHaveText('Motor vehicle registration')
       await expect(this.modelCloseButton).toBeVisible();
+      console.log(`Verifying the popup is present`);
+
    }
 
    async verifyPassengerVehicle(regristration: string) {
