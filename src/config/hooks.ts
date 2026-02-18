@@ -7,9 +7,11 @@ let context: BrowserContext;
 let page: Page;
 setDefaultTimeout(30000);
 
+const headless = process.env.HEADLESS !== 'false';
+
 Before(async function () {
   // this.browser = await firefox.launch({ headless: false });
-  this.browser = await chromium.launch({ headless: true });
+  this.browser = await chromium.launch({ headless });
   this.context = await this.browser.newContext();
   await this.context.tracing.start({ screenshots: true, snapshots: true, sources: true });
   page = await this.context.newPage();

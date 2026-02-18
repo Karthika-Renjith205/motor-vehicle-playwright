@@ -16,3 +16,4 @@ Scenario Outline: Verify motor vehicle stamp duty calculation
 Examples:
 | PassengerVehicle | PurchasePrice | ExpectedPrice | DutyPayable |
 | Yes              | 10000         | $10,000.00    | $300.00     |
+| Yes              | 25000         | $25,000.00    | $750.00     |

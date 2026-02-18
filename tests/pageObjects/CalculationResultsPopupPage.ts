@@ -27,19 +27,16 @@ export class CalculationResultsPopupPage {
    }
 
    async verifyPassengerVehicle(regristration: string) {
-      console.log(`Verifying the registration`);
       await expect(this.passengerRegistered).toBeVisible();
       await expect(this.passengerRegistered.locator('xpath=following-sibling::td')).toHaveText(regristration);
    }
 
    async verifyPurchasePrice(purchasePriceValue: string) {
-      console.log(`Verifying the purchase value`);
       await expect(this.purchasePrice).toBeVisible();
       await expect(this.purchasePrice.locator('xpath=following-sibling::td')).toHaveText(purchasePriceValue);
    }
 
    async verifyDutyPayable(dutyPayableValue: string) {
-      console.log(`Verifying the duty payable values`);
       await expect(this.dutyPayable).toBeVisible();
       await expect(this.dutyPayable.locator('xpath=following-sibling::td')).toHaveText(dutyPayableValue);
    }
