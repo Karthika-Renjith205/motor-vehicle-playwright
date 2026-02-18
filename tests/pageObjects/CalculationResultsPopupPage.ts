@@ -37,6 +37,7 @@ export class CalculationResultsPopupPage {
    }
 
    async verifyDutyPayable(dutyPayableValue: string) {
+      console.log(`Verifying the duty payable value`);
       await expect(this.dutyPayable).toBeVisible();
       await expect(this.dutyPayable.locator('xpath=following-sibling::td')).toHaveText(dutyPayableValue);
    }
