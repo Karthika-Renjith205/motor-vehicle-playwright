@@ -1,0 +1,175 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "motorvehiclestampduty;verify-motor-vehicle-stamp-duty-calculation",
+        "keyword": "Scenario Outline",
+        "line": 18,
+        "name": "Verify motor vehicle stamp duty calculation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1345689699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open the browser and load the NSW Services stamp duty verification page",
+            "match": {
+              "location": "tests\\steps\\CheckStampDuty.spec.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6411247599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I click the Check online button",
+            "match": {
+              "location": "tests\\steps\\CheckStampDuty.spec.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 334930599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should be navigated to the Revenue NSW calculator page",
+            "match": {
+              "location": "tests\\steps\\CheckStampDuty.spec.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 181954799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I select \"Yes\" to register a passenger vehicle",
+            "match": {
+              "location": "tests\\steps\\CheckStampDuty.spec.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 173181599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter a purchase value of \"10000\" $",
+            "match": {
+              "location": "tests\\steps\\CheckStampDuty.spec.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59036000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click the Calculate button",
+            "match": {
+              "location": "tests\\steps\\CheckStampDuty.spec.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112071599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see the Motor Vehicle Registration details",
+            "match": {
+              "location": "tests\\steps\\CheckStampDuty.spec.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 638977999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I verify the passenger vehicle is \"Yes\"",
+            "match": {
+              "location": "tests\\steps\\CheckStampDuty.spec.ts:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34779600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the purchase price is \"$10,000.00\"",
+            "match": {
+              "location": "tests\\steps\\CheckStampDuty.spec.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33668600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the duty payable is \"$300.00\"",
+            "match": {
+              "location": "tests\\steps\\CheckStampDuty.spec.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32979900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 593971499
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CheckMotorVehicleStampDuty",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "motorvehiclestampduty",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "MotorVehicleStampDuty",
+    "tags": [],
+    "uri": "tests\\features\\MotorVehicleRegistration.feature"
+  }
+]

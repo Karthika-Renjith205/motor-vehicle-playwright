@@ -15,7 +15,5 @@ cd MotorVehicleRegistration
 npm init playwright@latest
 npm install -D @cucumber/cucumber playwright ts-node typescript
 
-
-3. Run tests
-
-npx cucumber-js --tags "@CheckMotorVehicleStampDuty"
+3. Run tests : npm run cucumber
+4. Run report : npm run cucumber

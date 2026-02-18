@@ -1,5 +1,5 @@
 import { chromium, Browser, BrowserContext, Page, firefox } from "playwright";
-import { Before, After } from "@cucumber/cucumber";
+import { Before, After, AfterStep } from "@cucumber/cucumber";
 import { setDefaultTimeout } from '@cucumber/cucumber';
 
 let browser: Browser;
