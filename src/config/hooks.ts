@@ -11,17 +11,9 @@ const headless = process.env.HEADLESS !== 'false';
 
 Before(async function () {
   // this.browser = await firefox.launch({ headless: false });
-  //this.browser = await chromium.launch({ headless });
-      browser = await chromium.launch({
-        headless: process.env.HEADLESS !== 'false',
-        args: ['--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage']
-    });
-
- // this.context = await this.browser.newContext();
-  const context = await browser.newContext({
-        viewport: { width: 1280, height: 1024 },
-        recordVideo: { dir: 'videos/' } // optional
-    });
+  this.browser = await chromium.launch({ headless });
+  this.context = await this.browser.newContext();
+  await this.context.tracing.start({ screenshots: true, snapshots: true, sources: true });
   page = await this.context.newPage();
   this.page = page;
 });

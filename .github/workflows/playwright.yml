@@ -35,9 +35,7 @@ jobs:
         run: npx playwright install chromium --with-deps
 
       - name: Run Cucumber Tests
-        env:
-          HEADLESS: false
-        run: xvfb-run -s "-screen 0 1280x1024x24" npx cucumber-js tests --require-module ts-node/register --require tests/steps/**/*.ts
+        run: npm run cucumber
 
       - name: Generate HTML Report
         run:  npm run report
