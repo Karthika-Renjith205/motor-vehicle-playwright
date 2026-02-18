@@ -37,14 +37,11 @@ jobs:
       - name: Run Cucumber Tests
         run: npm run cucumber
 
-      - name: Generate Allure HTML Report
-        run: npx allure generate allure-results --clean -o allure-report
+      - name: Generate HTML Report
+        run:  npm run report
 
-
-      - name: Upload Allure Report
-        if: always()
-        uses: actions/upload-artifact@v4
+      - name: Upload HTML Report
+        uses: actions/upload-artifact@v3
         with:
-          name: allure-report
-          path: allure-report
-          retention-days: 30
+          name: cucumber-html-report
+          path: reports/cucumber-report.html
