@@ -27,8 +27,8 @@ export class RevenueNswCalculatorPage {
         await this.purchasePrice.fill(purchaseValue);
     }
 
-    async clickCalculateButton() {
-        await this.calculateButton.click();
+    async clickCalculateButton(options?: { force?: boolean }) {
+        await this.calculateButton.click(options);
         console.log("clicked calculate button");
     }
 }
