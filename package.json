@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "allure:generate": "allure generate allure-results --clean -o allure-report",
-    "allure:open": "allure open allure-report"
+    "allure:open": "allure open allure-report",
+    "cucumber": "cucumber-js 'tests/features/*.feature' --require-module ts-node/register --require 'tests/steps/*.spec.ts' --format json:allure-results/results.json"
   },
   "keywords": [],
   "author": "",

@@ -34,11 +34,13 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Cucumber tests
+      - name: List features and step definitions
         run: |
-          npx cucumber-js "features/**/*.feature" \
-            --require "features/step-definitions/**/*.ts" \
-            --tags "@CheckMotorVehicleStampDuty"
+          ls -R "tests/features/"
+          ls -R "tests/steps/"
+
+      - name: Run Cucumber Tests
+        run: npm run cucumber
 
       - name: Generate Allure Report
         if: always()
