@@ -6,8 +6,6 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-allure-report
-allure-results
 test-results
 .env
 dist
