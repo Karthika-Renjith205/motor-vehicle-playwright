@@ -35,12 +35,16 @@ When('I enter a purchase value of {string} $', async function (purchaseValue: st
 });
 
 When('I click the Calculate button', async function () {
-    await revenueNswCalculatorPage.clickCalculateButton();
+    await Promise.all([
+        this.page.waitForSelector('h4.modal-title', { state: 'visible', timeout: 5000 }),
+        revenueNswCalculatorPage.clickCalculateButton({ force: true })
+    ]);
+
 });
 
 Then('I should see the Motor Vehicle Registration details', async function () {
     calculaticonResultsPopup = new CalculationResultsPopupPage(this.page);
-    //await calculaticonResultsPopup.verifyPopupIsDisplayed();
+    await calculaticonResultsPopup.verifyPopupIsDisplayed();
 
 });
 
