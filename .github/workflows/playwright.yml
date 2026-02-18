@@ -32,19 +32,16 @@ jobs:
         run: npm ci
 
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: npx playwright install chromium --with-deps
 
       - name: Run Cucumber Tests
         run: npm run cucumber
 
-      - name: Generate Allure Report
-        if: always()
-        run: npm run allure:generate
+      - name: Generate HTML Report
+        run:  npm run report
 
-      - name: Upload Allure Report
-        if: always()
+      - name: Upload HTML Report
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report
-          path: allure-report
-          retention-days: 30
+          name: cucumber-html-report
+          path: reports/cucumber-report.html
