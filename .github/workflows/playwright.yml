@@ -35,6 +35,8 @@ jobs:
         run: npx playwright install chromium --with-deps
 
       - name: Run Cucumber Tests
+        env: 
+         HEADLESS: false
         run: npm run cucumber
 
       - name: Generate HTML Report
